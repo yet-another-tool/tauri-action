@@ -409,6 +409,8 @@ export async function buildProject(
               join(artifactsPath, `bundle/macos/${fileAppName}.app`),
               join(artifactsPath, `bundle/macos/${fileAppName}.app.tar.gz`),
               join(artifactsPath, `bundle/macos/${fileAppName}.app.tar.gz.sig`),
+              join(artifactsPath, `../universal-apple-darwin/release/bundle/dmg/${fileAppName}_${app.version}_universal.dmg`),
+              join(artifactsPath, `../universal-apple-darwin/release/bundle/macos/${fileAppName}.app`),
             ]
           } else if (platform() === 'win32') {
             // If multiple Wix languages are specified, multiple installers (.msi) will be made
